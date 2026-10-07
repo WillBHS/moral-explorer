@@ -1,0 +1,9 @@
+# Netlify 배포 설정
+# - public/ 폴더만 공개된다(화면 파일과 그림).
+# - netlify/functions/ 의 파일이 서버 함수가 된다. 주소(/api/chat 등)는 각 함수 파일 안에서 정한다.
+[build]
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
